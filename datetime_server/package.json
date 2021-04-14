@@ -1,0 +1,25 @@
+{
+  "name": "dev-exam-backend",
+  "version": "1.0.0",
+  "description": "Backend API",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "luxon": "^1.26.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnsanandres/dev-exam-backend.git"
+  },
+  "author": "Mervin San Andres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnsanandres/dev-exam-backend/issues"
+  },
+  "homepage": "https://github.com/mnsanandres/dev-exam-backend#readme"
+}
