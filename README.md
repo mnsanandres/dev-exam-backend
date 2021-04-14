@@ -1,10 +1,9 @@
-**API Guide**
-----
+#API Guide
 
-### Date Time API
+## Date Time API
 
 <a name="get_date_time"></a>
-#### Get Date and Time
+### Get Date and Time
 
 Returns a JSON response containing the current date and time.
 
@@ -43,9 +42,9 @@ Returns a JSON response containing the current date and time.
     });
   ```
 
-### Backend API
+## Backend API
 
-#### Get Responses
+### Get Responses
 
 Returns a JSON response containing a list of date time requested from [Get Date and Time](#get_date_time)
 
@@ -94,7 +93,7 @@ Returns a JSON response containing a list of date time requested from [Get Date 
     });
   ```
   
-#### Post Response
+### Post Response
 
 Saves a JSON response from a date time query from [Get Date and Time](#get_date_time)
 
