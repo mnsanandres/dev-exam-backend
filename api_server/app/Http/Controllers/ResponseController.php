@@ -12,7 +12,7 @@ class ResponseController extends Controller
 {
     public function index()
     {
-        return new ResponseCollection(Response::all());
+        return new ResponseCollection(Response::orderByDesc("date_time")->get());
     }
 
     public function show($id)
