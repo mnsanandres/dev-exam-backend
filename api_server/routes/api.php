@@ -21,5 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/responses', [ResponseController::class, 'index']);
 Route::get('/responses/{id}', [ResponseController::class, 'show']);
-Route::post('/responses', [ResponseController::class, 'store']);
-Route::delete('/responses/{id}', [ResponseController::class, 'delete']);
+Route::post('/response', [ResponseController::class, 'store']);
+Route::delete('/response/{id}', [ResponseController::class, 'delete']);
