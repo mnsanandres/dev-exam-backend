@@ -1,0 +1,54 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: alice
+        uid: 1000
+      context: ./api_server
+      dockerfile: Dockerfile
+    image: laravel-server
+    container_name: laravel-server
+    restart: unless-stopped
+    working_dir: /var/www/
+    ports:
+      - 8000:8000
+    networks:
+      - pingcentral
+    depends_on: 
+      - db
+  
+  api:
+    build:
+      context: ./datetime_server
+      dockerfile: Dockerfile
+    image: datetime-server
+    container_name: datetime-server
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    networks:
+      - pingcentral
+
+  db:
+    image: mysql:5.7
+    container_name: pingcentral-db
+    restart: unless-stopped
+    env_file: ./api_server/.env
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - "0.0.0.0:3306:3306"
+    volumes:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+    networks:
+      - pingcentral
+
+networks:
+  pingcentral:
+    driver: bridge

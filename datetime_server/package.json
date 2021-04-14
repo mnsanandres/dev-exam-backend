@@ -1,7 +1,7 @@
 {
   "name": "dev-exam-backend",
   "version": "1.0.0",
-  "description": "Backend API",
+  "description": "Date Time API",
   "main": "index.js",
   "dependencies": {
     "cors": "^2.8.5",
@@ -18,9 +18,5 @@
     "url": "git+https://github.com/mnsanandres/dev-exam-backend.git"
   },
   "author": "Mervin San Andres",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mnsanandres/dev-exam-backend/issues"
-  },
-  "homepage": "https://github.com/mnsanandres/dev-exam-backend#readme"
+  "license": "ISC"
 }
