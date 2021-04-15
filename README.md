@@ -1,3 +1,20 @@
+# Application Backend
+
+This application provides the backend APIs for the date time and CRUD operations.
+
+#### Ports
+* `3000` - NodeJS Date Time API
+* `8000` - Laravel CRUD API
+
+#### Building
+
+`docker-compose build`
+
+#### Running
+
+`docker-compose up -d`
+
+
 # API Guide
 
 ## Date Time API
